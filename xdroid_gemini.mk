@@ -18,9 +18,8 @@
 # Inherit from gemini device
 $(call inherit-product, device/xiaomi/gemini/device.mk)
 
-# Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/xdroid/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
+# Inherit some common xdroid stuff.
+$(call inherit-product, vendor/xdroid/config/common.mk)
 
 # Official xdroid
 XDROID_BOOT := 1080
