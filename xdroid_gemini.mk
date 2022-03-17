@@ -19,26 +19,23 @@
 $(call inherit-product, device/xiaomi/gemini/device.mk)
 
 # Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/xdroid/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
-#GApps
-TARGET_GAPPS_ARCH := arm64
-
+# Official xdroid
+XDROID_BOOT := 1080
+XDROID_MAINTAINER := phentem
+XDROID_BOOT_DARK := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_gemini
+PRODUCT_NAME := xdroid_gemini
 PRODUCT_DEVICE := gemini
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Mi 5
 PRODUCT_MANUFACTURER := Xiaomi
 
+PRODUCT_CHARACTERISTICS := nosdcard
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="gemini" \
-    PRIVATE_BUILD_DESC="gemini-user 8.0.0 OPR1.170623.032 V9.6.1.0.OAAMIFD release-keys"
-
-# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "Xiaomi/gemini/gemini:8.0.0/OPR1.170623.032/V9.6.1.0.OAAMIFD:user/release-keys"
-
-TARGET_VENDOR := Xiaomi
