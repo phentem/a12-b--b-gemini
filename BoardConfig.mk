@@ -19,7 +19,7 @@
 -include device/xiaomi/msm8996-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/gemini
-
+BUILD_BROKEN_DUP_RULES := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := gemini
 
