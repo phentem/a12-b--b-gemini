@@ -22,6 +22,10 @@ $(call inherit-product, device/xiaomi/gemini/device.mk)
 $(call inherit-product, vendor/cherish/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
+CHERISH_BUILD_TYPE := UNOFFICIAL
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer=phentem
+
 #GApps
 TARGET_GAPPS_ARCH := arm64
 
