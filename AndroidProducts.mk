@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_gemini.mk
+    $(LOCAL_DIR)/octavi_gemini.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_gemini-user \
-    aosp_gemini-userdebug \
-    aosp_gemini-eng
+    octavi_gemini-user \
+    octavi_gemini-userdebug \
+    octavi_gemini-eng
